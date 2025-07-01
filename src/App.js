@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { motion } from "framer-motion";
 
-// Replace with your Supabase keys
-const supabaseUrl = "https://wkoprjwroyuroxtjrqpq.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indrb3Byandyb3l1cm94dGpycXBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNTc1NzMsImV4cCI6MjA2NjkzMzU3M30.lgydOt5EvRseJMoYgMlOZGI8-n0ugkXcAjRrlLJ2mSE";
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+const supabaseKey = process.env.REACT_APP_SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 
